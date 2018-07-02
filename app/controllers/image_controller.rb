@@ -1,20 +1,20 @@
 class ImageController < ApplicationController
-  def view
-  	colors = ["deepskyblue",
-  		"forestgreen",
-  		"powderblue",
-  		"sandybrown",
-  		"moccasin",
-  		"lightseagreen",
-  		"lemonchiffon",
-  		"darksalmon",
-  		"darkorchid",
-  		"greenyellow",
-  		"blanchedalmond",
-  		"darkgoldenrod",
-  		"steelblue"]
 
-  	color_code = colors[Integer(params[:id]) % 13]
-  	render partial: "view", content_type: "image/svg+xml", locals: {color_code: color_code}
+  def dinosaur
+    require "dna_reader.rb"
+
+    decoded_locals = DnaReader::dna_read_dino(params[:id])
+
+    puts decoded_locals
+
+  	render partial: "dinosaur", content_type: "image/svg+xml", locals: decoded_locals
+  end
+
+  def unicorn
+    require "dna_reader.rb"
+
+    decoded_locals = DnaReader::dna_read_uni(params[:id])
+
+    render partial: "unicorn", content_type: "image/svg+xml", locals: decoded_locals
   end
 end
