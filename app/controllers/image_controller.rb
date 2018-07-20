@@ -3,11 +3,18 @@ class ImageController < ApplicationController
   def dinosaur
     require "dna_reader.rb"
 
-    decoded_locals = DnaReader::dna_read_dino(params[:id])
+    svg_params = DnaReader::dna_read_dino(params[:id])
 
-    puts decoded_locals
+    puts svg_params[:colorCombination]
+    colorCombination = ColorCombination.where(external_id: svg_params[:colorCombination]).first
 
-  	render partial: "dinosaur", content_type: "image/svg+xml", locals: decoded_locals
+    svg_params[:secondaryColor] = colorCombination.secondary_color
+    svg_params[:primaryColor] = colorCombination.primary_color
+    svg_params[:darkPrimary] = colorCombination.darkened_primary
+    svg_params[:lightPrimary] = colorCombination.lightened_primary
+    svg_params[:darkSecondary] = colorCombination.darkened_secondary
+
+  	render partial: "dinosaur", content_type: "image/svg+xml", locals: svg_params
   end
 
   def unicorn

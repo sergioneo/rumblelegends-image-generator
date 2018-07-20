@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   get "dinosaur/:id", to:'image#dinosaur'
   get "unicorn/:id", to:'image#unicorn'
 
