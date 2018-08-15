@@ -35,7 +35,7 @@ class DnaReader
 			bitLength = attrLength[i]
 			gene = catch_gene(parsedDna, bitLength)
 			parsedDna = remove_gene(parsedDna, bitLength)
-			if attrWanted.includes?(attribute)
+			if attrWanted.include?(attribute)
 				result[attribute.to_sym] = gene.truncate(0).to_i.to_s
 			end
 		end
