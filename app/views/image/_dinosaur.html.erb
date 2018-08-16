@@ -4,31 +4,33 @@
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 width="1417.322px" height="1417.322px" viewBox="0 0 1417.322 1417.322" enable-background="new 0 0 1417.322 1417.322"
 	 xml:space="preserve">
-<g id="Tail">
-	<%= render partial: "parts/dinosaur/common/tail/tail_"+tail.to_s %>	
-</g>
-<g id="Legs_back">
-	<%= render partial: "parts/dinosaur/common/legs/legs_back_"+legs.to_s %>
-</g>
-<g id="Body_base">
-	<%= render partial: "parts/dinosaur/type_"+type.to_s+"/body/body_"+nose.to_s %>
-</g>
-<g id="Bristles">
-	<%= render partial: "parts/dinosaur/type_"+type.to_s+"/bristles/bristles_"+spikes.to_s %>
-</g>
-<g id="Hair">
-	<%= render partial: "parts/dinosaur/type_"+type.to_s+"/hair/hair_"+plume.to_s %>
-</g>
-<g id="Legs_Front">
-	<%= render partial: "parts/dinosaur/common/legs/legs_front_"+legs.to_s %>
-</g>
-<g id="Eyes">
-	<%= render partial: "parts/dinosaur/type_"+type.to_s+"/eyes/eyes_"+eyes.to_s %>
-</g>
-<g id="Mouth">
-	<%= render partial: "parts/dinosaur/type_"+type.to_s+"/mouth/mouth_"+mouth.to_s %>
-</g>
-<g id="Dino_Print">
-	<%= render partial: "parts/dinosaur/type_"+type.to_s+"/prints/prints_"+wings.to_s %>
-</g>
+	<g transform="translate(0,100)">
+		<g id="Tail">
+			<%= render partial: "parts/dinosaur/common/tail/tail_"+tail.to_s %>	
+		</g>
+		<g id="Legs_back">
+			<%= render partial: "parts/dinosaur/common/legs/legs_back_"+legs.to_s %>
+		</g>
+		<g id="Body_base">
+			<%= render partial: "parts/dinosaur/type_"+type.to_s+"/body/body_"+nose.to_s %>
+		</g>
+		<g id="Bristles">
+			<%= render partial: "parts/dinosaur/type_"+type.to_s+"/bristles/bristles_"+spikes.to_s %>
+		</g>
+		<g id="Hair">
+			<%= render partial: "parts/dinosaur/type_"+type.to_s+"/hair/hair_"+plume.to_s %>
+		</g>
+		<g id="Legs_Front">
+			<%= render partial: "parts/dinosaur/common/legs/legs_front_"+legs.to_s %>
+		</g>
+		<g id="Eyes">
+			<%= render partial: "parts/dinosaur/type_"+type.to_s+"/eyes/eyes_"+eyes.to_s %>
+		</g>
+		<g id="Mouth">
+			<%= render partial: "parts/dinosaur/type_"+type.to_s+"/mouth/mouth_"+mouth.to_s %>
+		</g>
+		<g id="Dino_Print">
+			<%= render partial: "parts/dinosaur/type_"+type.to_s+"/prints/prints_"+wings.to_s %>
+		</g>
+	</g>
 </svg>
