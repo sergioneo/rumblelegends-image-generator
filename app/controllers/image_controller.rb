@@ -25,7 +25,7 @@ class ImageController < ApplicationController
   def unicorn
     require "dna_reader.rb"
 
-    svg_params = DnaReader::dna_read_dino(params[:id])
+    svg_params = DnaReader::dna_read_uni(params[:id])
 
     puts svg_params[:colorCombination]
     colorCombination = ColorCombination.where(external_id: svg_params[:colorCombination]).first
