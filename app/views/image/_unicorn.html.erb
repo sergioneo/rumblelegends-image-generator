@@ -41,37 +41,37 @@
 </style>
 <g>
   <g id="Tail">
-    <%= render partial: "parts/unicorn/common/tail/tail_"+tail.to_s %> 
+    <%= render partial: "parts/unicorn/common/tail/tail_"+tail.to_s, locals: local_assigns %> 
   </g>
   <g id="Hair_back">
-    <%= render partial: "parts/unicorn/common/hair/hair_back_"+hair.to_s %> 
+    <%= render partial: "parts/unicorn/common/hair/hair_back_"+hair.to_s, locals: local_assigns %> 
   </g>
   <g id="Legs_back">
-    <%= render partial: "parts/unicorn/common/legs/legs_back_"+legs.to_s %> 
+    <%= render partial: "parts/unicorn/common/legs/legs_back_"+legs.to_s, locals: local_assigns %> 
   </g>
   <g id="Body">
-    <%= render partial: "parts/unicorn/common/body/body_"+type.to_s %> 
+    <%= render partial: "parts/unicorn/common/body/body_"+type.to_s, locals: local_assigns %> 
   </g>
   <g id="Legs_front">
-    <%= render partial: "parts/unicorn/common/legs/legs_front_"+legs.to_s %> 
+    <%= render partial: "parts/unicorn/common/legs/legs_front_"+legs.to_s, locals: local_assigns %> 
   </g>
   <g id="Hair_front">
-    <%= render partial: "parts/unicorn/common/hair/hair_front_"+hair.to_s %> 
+    <%= render partial: "parts/unicorn/common/hair/hair_front_"+hair.to_s, locals: local_assigns %> 
   </g>
   <g id="Horn">
-    <%= render partial: "parts/unicorn/common/horn/horn_"+horn.to_s %>
+    <%= render partial: "parts/unicorn/common/horn/horn_"+horn.to_s, locals: local_assigns %>
   </g>
   <g id="Ear_Thin">
-    <%= render partial: "parts/unicorn/common/body/ear_"+type.to_s %> 
+    <%= render partial: "parts/unicorn/common/body/ear_"+type.to_s, locals: local_assigns %> 
   </g>
   <g id="Eyes">
-    <%= render partial: "parts/unicorn/common/eyes/eyes_"+eyes.to_s %>
+    <%= render partial: "parts/unicorn/common/eyes/eyes_"+eyes.to_s, locals: local_assigns %>
   </g>
   <g id="Mouth">
-    <%= render partial: "parts/unicorn/common/mouth/mouth_"+snout.to_s %>
+    <%= render partial: "parts/unicorn/common/mouth/mouth_"+snout.to_s, locals: local_assigns %>
   </g>
   <g id="Skin_print">
-    <%= render partial: "parts/unicorn/common/prints/prints_"+eyes.to_s %>
+    <%= render partial: "parts/unicorn/common/prints/prints_"+eyes.to_s, locals: local_assigns %>
   </g>
 </g>
 </svg>
