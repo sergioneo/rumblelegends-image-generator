@@ -6,31 +6,31 @@
 	 xml:space="preserve">
 	<g transform="translate(0,100)">
 		<g id="Tail">
-			<%= render partial: "parts/dinosaur/common/tail/tail_"+tail.to_s %>	
+			<%= render partial: "parts/dinosaur/common/tail/tail_"+tail.to_s, locals: local_assigns %>	
 		</g>
 		<g id="Legs_back">
-			<%= render partial: "parts/dinosaur/common/legs/legs_back_"+legs.to_s %>
+			<%= render partial: "parts/dinosaur/common/legs/legs_back_"+legs.to_s, locals: local_assigns %>
 		</g>
 		<g id="Body_base">
-			<%= render partial: "parts/dinosaur/type_"+type.to_s+"/body/body_"+nose.to_s %>
+			<%= render partial: "parts/dinosaur/type_"+type.to_s+"/body/body_"+nose.to_s, locals: local_assigns %>
 		</g>
 		<g id="Bristles">
-			<%= render partial: "parts/dinosaur/type_"+type.to_s+"/bristles/bristles_"+spikes.to_s %>
+			<%= render partial: "parts/dinosaur/type_"+type.to_s+"/bristles/bristles_"+spikes.to_s, locals: local_assigns %>
 		</g>
 		<g id="Hair">
-			<%= render partial: "parts/dinosaur/type_"+type.to_s+"/hair/hair_"+plume.to_s %>
+			<%= render partial: "parts/dinosaur/type_"+type.to_s+"/hair/hair_"+plume.to_s, locals: local_assigns %>
 		</g>
 		<g id="Legs_Front">
-			<%= render partial: "parts/dinosaur/common/legs/legs_front_"+legs.to_s %>
+			<%= render partial: "parts/dinosaur/common/legs/legs_front_"+legs.to_s, locals: local_assigns %>
 		</g>
 		<g id="Eyes">
-			<%= render partial: "parts/dinosaur/type_"+type.to_s+"/eyes/eyes_"+eyes.to_s %>
+			<%= render partial: "parts/dinosaur/type_"+type.to_s+"/eyes/eyes_"+eyes.to_s, locals: local_assigns %>
 		</g>
 		<g id="Mouth">
-			<%= render partial: "parts/dinosaur/type_"+type.to_s+"/mouth/mouth_"+mouth.to_s %>
+			<%= render partial: "parts/dinosaur/type_"+type.to_s+"/mouth/mouth_"+mouth.to_s, locals: local_assigns %>
 		</g>
 		<g id="Dino_Print">
-			<%= render partial: "parts/dinosaur/type_"+type.to_s+"/prints/prints_"+wings.to_s %>
+			<%= render partial: "parts/dinosaur/type_"+type.to_s+"/prints/prints_"+wings.to_s, locals: local_assigns %>
 		</g>
 	</g>
 </svg>
